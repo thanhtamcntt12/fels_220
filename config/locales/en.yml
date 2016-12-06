@@ -22,4 +22,9 @@ en:
   hello: "Hello world"
   layouts:
     application:
-      title: "Fels220"
+      fels220: "Fels220"
+      facebook: "Facebook"
+  e_learning: "E-Learning"
+  log_in: "Log In"
+  sign_up: "Sign Up"
+
