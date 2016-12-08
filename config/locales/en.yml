@@ -27,4 +27,13 @@ en:
   e_learning: "E-Learning"
   log_in: "Log In"
   sign_up: "Sign Up"
-
+  log_out: "Log out"
+  create_my_account: "Create my account"
+  sign_up_success: "Wellcome to the E-LEARNING"
+  new_user: "New user? "
+  sign_up_now: "Sign up now!"
+  home: "Home"
+  shared:
+    error_messages:
+      error_message: "The form contains "
+      error: "error"

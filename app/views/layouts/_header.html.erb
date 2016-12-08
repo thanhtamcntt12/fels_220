@@ -1,14 +1,11 @@
-<div class="navbar navbar-fixed-top navbar-inverse ">
+<header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <div id="logo">
-      <%= link_to t("e_learning"), root_path %>
-    </div>
+    <%= link_to "sample app", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to t("home"), root_path %></li>
-        <li><%= link_to t("log_in"), "#" %></li>
-        <li><%= link_to t("sign_up"), "#" %></li>
+        <li><%= link_to "Log in", "#" %></li>
       </ul>
     </nav>
   </div>
-</div>
+</header>
