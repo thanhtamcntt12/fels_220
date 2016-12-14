@@ -6,6 +6,10 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def index
+    @users = User.paginate page: params[:page], per_page: Settings.per_page.user
+  end
+
   def show
     @user = User.find_by id: params[:id]
     unless @user
