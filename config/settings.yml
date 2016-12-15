@@ -1,0 +1,3 @@
+page_404_url: "public/404.html"
+per_page:
+  user: 5
