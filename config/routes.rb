@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   post "login" => "sessions#create"
   delete "logout" => "sessions#destroy"
   resources :users
+  namespace :admin do
+    resources :categories
+  end
 end

@@ -1,0 +1,29 @@
+<% provide :title, t("category") %>
+<h1><%= t("category") %></h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= link_to t("create"), new_admin_category_path, class: "btn btn-primary" %>
+    <table class="table">
+      <thead>
+        <tr>
+          <th><%= t("stt") %></th>
+          <th><%= t("Name") %></th>
+          <th><%= t("action") %></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @categories.each do |category| %>
+        <tr>
+          <td><%= category.id %></td>
+          <td><%= category.name %></td>
+          <td>
+            <%= link_to t("edit"), "#" %>
+            <%= link_to t("delete"), "#" %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate %>
+  </div>
+</div>
