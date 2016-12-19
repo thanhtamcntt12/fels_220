@@ -1,0 +1,19 @@
+<% provide :title, t("all_users") %>
+<div class="fix_box">
+  <h1><%= t("all_users") %></h1>
+  <ul class="users">
+    <table class="table">
+      <thead class="table-title">
+        <tr>
+          <td><%= t "avatar" %></td>
+          <td><%= t "user_name" %></td>
+          <td><%= t "action" %></td>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render "admin_user" %>
+      </tbody>
+    </table>
+  </ul>
+  <div class="center"><%= will_paginate %></div>
+</div>
