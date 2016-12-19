@@ -1,0 +1,34 @@
+<% provide :title, t("all_words") %>
+<h1><%= t ("all_words") %></h1>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= link_to t("create_words"), new_admin_word_path, class: "btn btn-primary" %>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th><%= t "stt" %></th>
+          <th><%= t "name" %></th>
+          <th><%= t "category_name" %></th>
+          <th><%= t "action" %></th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @words.each do |word| %>
+        <tr>
+          <td><%= word.id %></td>
+          <td><%= word.word_detail %></td>
+          <td><%= word.category.name %></td>
+          <td>
+            <%= link_to t("edit"), "#",
+              class: "btn btn-primary" %>
+            <%= link_to t("delete"), "#",
+              method: :delete, data: {confirm: "message_delete" },
+              class: "btn btn-danger" %>
+          </td>
+        </tr>
+      <% end %>
+      </tbody>
+    </table>
+    <%= will_paginate %>
+  </div>
+</div>
