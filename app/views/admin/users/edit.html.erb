@@ -1,0 +1,27 @@
+<% provide :title, t("edit_user") %>
+<div class="row fix_box">
+  <h1><%= t("edit_user") %></h1>
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @user] do |f| %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :email %>
+      <%= f.email_field :email, class: "form-control" %>
+
+      <%= f.label :password %>
+      <%= f.password_field :password, class: "form-control" %>
+
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+
+      <%= f.submit t("submit"), class: "btn btn-primary center" %>
+    <% end %>
+
+    <div class="gravatar_edit">
+      <%= gravatar_for @user %>
+      <%= link_to t("change"), "http://gravatar.com/emails", target: "_blank" %>
+    </div>
+  </div>
+</div>

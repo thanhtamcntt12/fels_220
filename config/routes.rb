@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   delete "logout" => "sessions#destroy"
   resources :users
   namespace :admin do
+    resources :users, except: [:new, :create, :show]
     resources :categories
   end
 end
