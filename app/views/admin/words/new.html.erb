@@ -1,0 +1,17 @@
+<% provide :title, t("create_words") %>
+<% provide :button_text, t("create_words") %>
+<h1><%= t "create_words" %></h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for [:admin, @word] do |f| %>
+      <%= f.label :category_id %>
+      <%= f.collection_select :category_id, @categories, :id, :name %>
+
+      <%= f.label :word_detail %>
+      <%= f.text_field :word_detail, class: "form-control" %>
+
+      <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
