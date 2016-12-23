@@ -80,3 +80,6 @@ en:
   category_not_found: "Category Not Found"
   new_words: "New Words"
   admin_load_fails_category: "admin load fails category"
+  update_success: "Update Success!"
+  word_delete: "Words Delete!"
+  update_words: "Update Words"

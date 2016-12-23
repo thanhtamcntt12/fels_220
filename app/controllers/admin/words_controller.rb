@@ -28,6 +28,27 @@ class Admin::WordsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    if @word.update_attributes word_params
+      flash[:success] = t "update_success"
+      redirect_to admin_words_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    if @word.destroy
+      flash[:success] = t "word_delete"
+    else
+      flash[:danger] = t "unsuccess_delete"
+    end
+    redirect_to admin_words_path
+  end
+
   private
   def word_params
     params.require(:word).permit :word_detail, :category_id
